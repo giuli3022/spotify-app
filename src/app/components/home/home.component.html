@@ -1,16 +1,1 @@
-
-<div class="row row-cols-1 row-cols-md-3 g-4">
-    <div *ngFor="let newRelease of newRealeases" class="col">
-        <div class="card">
-            <img [src]="newRelease.images | noimage" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">
-                    {{newRelease.name}}
-                </h5>
-                <p *ngFor="let artist of newRelease.artists" class="card-text">
-                    {{artist.name}}
-                </p>
-            </div>
-        </div>
-    </div>
-</div>
+<app-cards class="row" [items]="newRealeases"></app-cards>
