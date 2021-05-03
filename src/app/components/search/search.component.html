@@ -6,5 +6,6 @@
     </div>
 </div>
 <div class="container py-5">
-    <app-cards [items]="artistas" class="row"></app-cards>
+    <app-loading *ngIf="loading"></app-loading>
+    <app-cards *ngIf="!loading" [items]="artistas" class="row"></app-cards>
 </div>
