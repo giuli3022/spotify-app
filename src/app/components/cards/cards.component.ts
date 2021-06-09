@@ -13,14 +13,13 @@ export class CardsComponent {
   constructor( private router: Router ) { }
 
   clickArtist(item: any) {
-    let artistId;
+    let artistId: any;
 
     if (item.type === 'artist') {
       artistId = item.id;
     } else {
       artistId = item.artists[0].id;
     }
-
     this.router.navigate([ '/artist', artistId ]);
   }
 }
