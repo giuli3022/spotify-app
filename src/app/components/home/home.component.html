@@ -1,2 +1,5 @@
 <app-loading *ngIf="loading"></app-loading>
+<div *ngIf="error" class="alert alert-danger" role="alert">
+    {{ errorMessage }}
+  </div>
 <app-cards class="row" [items]="newRealeases"></app-cards>
